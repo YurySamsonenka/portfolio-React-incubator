@@ -11,6 +11,7 @@ type IconPropsType = {
 export const Icon = (props: IconPropsType) => {
   return (
     <svg
+      id={props.iconId}
       width={props.width || 18}
       height={props.height || 18}
       viewBox={props.viewBox || '0 0 18 18'}

@@ -16,7 +16,7 @@ export const AbilityItem = (props: AbilityNamePropsType) => {
         type="range"
         value={`${props.value}`}
         name="range"
-        id={`range${props.value}`}
+        id={`${props.name}${props.rangeId}`}
       ></Range>
     </StyledAbilityItem>
   );
