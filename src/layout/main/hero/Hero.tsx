@@ -3,9 +3,6 @@ import { MyTheme } from '../../../styles/Theme.styled';
 import { Icon } from '../../../componets/icon/Icon';
 import img from '../../../assets/images/photo.webp';
 
-type StyledHeroPropsType = {
-  id: string;
-};
 
 export const Hero = () => {
   return (
@@ -40,7 +37,7 @@ export const Hero = () => {
   );
 };
 
-const StyledHero = styled.section<StyledHeroPropsType>`
+const StyledHero = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -72,6 +69,8 @@ const Title = styled.h1`
 
 const Text = styled.p`
   margin-bottom: 25px;
+  max-width: 425px;
+  text-transform: capitalize;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 24px;
