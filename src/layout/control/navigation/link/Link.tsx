@@ -13,7 +13,7 @@ type StyledLinkPropsType = {
 
 export const Link = (props: LinkPropsType) => {
   return (
-    <StyledLink href={`#${props.linkData}`} myTitle={props.linkData}>
+    <StyledLink href={`#${props.linkData}`} myTitle={props.myTitle}>
       <Icon
         iconId={props.linkData}
         width="18px"
@@ -60,7 +60,8 @@ const StyledLink = styled.a<StyledLinkPropsType>`
 
   @media (hover: hover) {
     &:hover::after {
-      content: attr(${(props) => props.myTitle});
+      content: '${(props) => props.myTitle}';
+      text-transform: capitalize;
       z-index: 100;
       width: min-content;
       padding: 6px 15px 3px 15px;
