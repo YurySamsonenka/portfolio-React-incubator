@@ -5,6 +5,7 @@ import { SocialIcons } from './social-icons/SocialIcons';
 import { Status } from './status/Status';
 import { AbilitesBlock } from './abilites-block/AbilitesBlock';
 import { Download } from './download/Download';
+import { ExtraSkills } from './extra-skills/ExtraSkills';
 
 const itemsAbility = {
   Languages: {
@@ -30,6 +31,7 @@ export const SideBar = () => {
       {Object.entries(itemsAbility).map((el, i) => {
         return <AbilitesBlock key={i} title={el[0]} itemsAbilites={el[1]} />;
       })}
+      <ExtraSkills />
       <Download />
     </StyledSideBar>
   );

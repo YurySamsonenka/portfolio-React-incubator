@@ -3,9 +3,13 @@ import { MyTheme } from '../../../styles/Theme.styled';
 import { Icon } from '../../../componets/icon/Icon';
 import img from '../../../assets/images/photo.webp';
 
+type StyledHeroPropsType = {
+  id: string;
+};
+
 export const Hero = () => {
   return (
-    <StyledHero>
+    <StyledHero id="home">
       <Content>
         <Title>
           I’m Rayan Adlrdard <span>Front-end</span> Developer
@@ -36,7 +40,7 @@ export const Hero = () => {
   );
 };
 
-const StyledHero = styled.section`
+const StyledHero = styled.section<StyledHeroPropsType>`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Main } from './layout/main/main';
+import { Main } from './layout/main/Main';
 import { SideBar } from './layout/sidebar/SideBar';
 import { Control } from './layout/control/Control';
 

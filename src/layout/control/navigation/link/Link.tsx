@@ -40,7 +40,6 @@ const StyledLink = styled.a<StyledLinkPropsType>`
     fill: ${MyTheme.colors.dark.secondary};
   }
 
-  /* [mytitle] { */
   &::after {
     content: '';
     position: absolute;
@@ -76,7 +75,6 @@ const StyledLink = styled.a<StyledLinkPropsType>`
     &:hover::before {
       border-top: 10px solid ${MyTheme.colors.dark.primary};
     }
-    /* } */
   }
 
   @media (hover: hover) {
