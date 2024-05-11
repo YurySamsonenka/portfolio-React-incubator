@@ -11,7 +11,7 @@ export const CustomCard = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla
         diam in ac dictum a urna viverra morbi.
       </CardText>
-      <Link>
+      <Link href='#'>
         ORDER NOW
         <Icon
           iconId="services-arrow"
