@@ -36,7 +36,7 @@ const comments = [
 
 export const Recommendations = () => {
   return (
-    <StyledRecommendations>
+    <StyledRecommendations id='recommendations'>
       <Title>recommendations</Title>
       <Description>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet

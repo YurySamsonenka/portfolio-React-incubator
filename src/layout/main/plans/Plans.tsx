@@ -57,7 +57,7 @@ const plans = [
 
 export const Plans = () => {
   return (
-    <StyledPlans>
+    <StyledPlans id="plans">
       <Title>Price plans</Title>
       <Description>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
