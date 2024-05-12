@@ -3,6 +3,7 @@ import { Hero } from './hero/Hero';
 import { Plans } from './plans/Plans';
 import { Recommendations } from './plans/recommendations/Recommendations';
 import { Portfolio } from './portfolio/Portfolio';
+import { Separator } from './separator/Separator';
 import { Services } from './services/Services';
 
 const activites = [
@@ -76,6 +77,7 @@ export const Main = () => {
       <Hero />
       <Services />
       <Plans />
+      <Separator />
       <Recommendations />
       {activites.map((el) => {
         return <Activity key={el.title} data={el} />;
