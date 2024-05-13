@@ -79,5 +79,6 @@ const Certificate = styled.span`
 const Discription = styled.p`
   font-size: 1.5rem;
   line-height: 24px;
+  text-transform: capitalize;
   color: ${MyTheme.colors.dark.secondary};
 `;

@@ -47,7 +47,7 @@ const StyledSocialIcons = styled.ul`
   justify-content: space-between;
   ${buttomLine}
 `;
-const SocialIconsLink = styled.a`
+export const SocialIconsLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;

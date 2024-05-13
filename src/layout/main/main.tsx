@@ -1,11 +1,19 @@
+import styled from 'styled-components';
 import { Activity } from './activity/Activity';
 import { Blog } from './blog/Blog';
 import { Hero } from './hero/Hero';
+import { marginButtom } from './placeholders';
 import { Plans } from './plans/Plans';
 import { Recommendations } from './plans/recommendations/Recommendations';
 import { Portfolio } from './portfolio/Portfolio';
 import { Separator } from './separator/Separator';
 import { Services } from './services/Services';
+import { Connection } from './connection/Connection';
+import { Title } from './Title';
+import { Contact } from './contact/Contact';
+import { Map } from './map/Map';
+import { Banners } from './banners/Banners';
+import { Footer } from '../footer/Footer';
 
 const activites = [
   {
@@ -85,7 +93,27 @@ export const Main = () => {
       })}
       <Portfolio />
       <Blog />
-      
+      <TwoSections id="contact">
+        <Connection />
+        <Contact />
+      </TwoSections>
+      <Map />
+      <Banners />
+      <Footer />
     </main>
   );
 };
+
+const TwoSections = styled.div`
+  ${marginButtom}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 70px;
+  row-gap: 70px;
+  column-gap: min(max(10px, 3%), 30px);
+
+  ${Title} {
+    margin-bottom: 51px;
+  }
+`;
