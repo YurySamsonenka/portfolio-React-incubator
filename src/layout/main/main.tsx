@@ -1,4 +1,5 @@
 import { Activity } from './activity/Activity';
+import { Blog } from './blog/Blog';
 import { Hero } from './hero/Hero';
 import { Plans } from './plans/Plans';
 import { Recommendations } from './plans/recommendations/Recommendations';
@@ -83,6 +84,8 @@ export const Main = () => {
         return <Activity key={el.title} data={el} />;
       })}
       <Portfolio />
+      <Blog />
+      
     </main>
   );
 };
