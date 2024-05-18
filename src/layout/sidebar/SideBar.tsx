@@ -6,6 +6,7 @@ import { Status } from './status/Status';
 import { AbilitesBlock } from './abilites-block/AbilitesBlock';
 import { Download } from './download/Download';
 import { ExtraSkills } from './extra-skills/ExtraSkills';
+import { Icon } from '../../componets/icon/Icon';
 
 const itemsAbility = {
   Languages: {
@@ -25,6 +26,9 @@ const itemsAbility = {
 export const SideBar = () => {
   return (
     <StyledSideBar>
+      <CloseBtn>
+        <Icon iconId="close" height="23px" width="23px" viewBox="0 0 23 23" />
+      </CloseBtn>
       <Info />
       <SocialIcons />
       <Status />
@@ -38,6 +42,7 @@ export const SideBar = () => {
 };
 
 const StyledSideBar = styled.article`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 305px;
@@ -47,7 +52,18 @@ const StyledSideBar = styled.article`
   background-color: ${MyTheme.colors.white};
 
   @media ${MyTheme.media.largeTablet} {
-    position: fixed;
-    right: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+`;
+
+const CloseBtn = styled.div`
+  position: absolute;
+  top: 35px;
+  right: 30px;
+
+  svg {
+    fill: ${MyTheme.colors.primary};
   }
 `;

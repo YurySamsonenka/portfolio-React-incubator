@@ -28,6 +28,7 @@ const StyledControl = styled.aside`
   @media ${MyTheme.media.largeTablet} {
     align-items: center;
     position: sticky;
+    z-index: 20;
     bottom: 0;
     padding: 0 130px;
     flex-direction: row;

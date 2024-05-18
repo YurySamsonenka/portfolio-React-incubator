@@ -57,7 +57,8 @@ const StyledHero = styled.section`
 
   @media ${MyTheme.media.largeTablet} {
     flex-direction: column;
-  row-gap: 50px;
+    align-items: center;
+    row-gap: 50px;
   }
 `;
 
