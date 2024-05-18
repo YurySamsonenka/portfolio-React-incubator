@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { marginButtom } from '../placeholders';
 import { Title } from '../Title';
 import { Description } from '../Description';
-import { CustomLink } from '../../../componets/icon/CustomLink';
+import { CustomLink } from '../../../componets/CustomLink';
 import { MyTheme } from '../../../styles/Theme.styled';
 import img1 from '../../../assets/images/portfolio/Image1.webp';
 import img2 from '../../../assets/images/portfolio/Image2.webp';

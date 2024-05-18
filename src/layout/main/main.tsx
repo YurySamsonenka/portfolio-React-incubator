@@ -14,6 +14,7 @@ import { Contact } from './contact/Contact';
 import { Map } from './map/Map';
 import { Banners } from './banners/Banners';
 import { Footer } from '../footer/Footer';
+import { WrapperForMain } from '../../componets/WrapperForMain';
 
 const activites = [
   {
@@ -83,20 +84,22 @@ const activites = [
 export const Main = () => {
   return (
     <main>
-      <Hero />
-      <Services />
-      <Plans />
-      <Separator />
-      <Recommendations />
-      {activites.map((el) => {
-        return <Activity key={el.title} data={el} />;
-      })}
-      <Portfolio />
-      <Blog />
-      <TwoSections id="contact">
-        <Connection />
-        <Contact />
-      </TwoSections>
+      <WrapperForMain>
+        <Hero />
+        <Services />
+        <Plans />
+        <Separator />
+        <Recommendations />
+        {activites.map((el) => {
+          return <Activity key={el.title} data={el} />;
+        })}
+        <Portfolio />
+        <Blog />
+        <TwoSections id="contact">
+          <Connection />
+          <Contact />
+        </TwoSections>
+      </WrapperForMain>
       <Map />
       <Banners />
       <Footer />

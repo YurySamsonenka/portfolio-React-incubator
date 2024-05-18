@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { MyTheme } from '../styles/Theme.styled';
+import { WrapperForMain } from './WrapperForMain';
 
 export const Wrapper = styled.div`
   position: relative;
@@ -10,4 +12,11 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   padding: 0 20px;
   column-gap: min(max(27px, 2%), 30px);
+
+  @media ${MyTheme.media.largeTablet} {
+    grid-template-columns: none;
+    padding: 0;
+    column-gap: normal;
+    margin: auto;
+  }
 `;

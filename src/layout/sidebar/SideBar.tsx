@@ -45,4 +45,9 @@ const StyledSideBar = styled.article`
   padding: 40px 45px 15px 40px;
   font-size: 1.5rem;
   background-color: ${MyTheme.colors.white};
+
+  @media ${MyTheme.media.largeTablet} {
+    position: fixed;
+    right: 100%;
+  }
 `;

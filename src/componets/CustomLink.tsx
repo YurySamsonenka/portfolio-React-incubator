@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { MyTheme } from '../../styles/Theme.styled';
-import { Icon } from './Icon';
+import { MyTheme } from '../styles/Theme.styled';
+import { Icon } from './icon/Icon';
 
 type CustomLinkPropsType = {
   href: string;

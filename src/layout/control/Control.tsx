@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ThemeToggler } from './theme-toggler/ThemeToggler';
 import { Navigation } from './navigation/Navigation';
+import { MyTheme } from '../../styles/Theme.styled';
 
 export const Control = () => {
   return (
@@ -23,4 +24,14 @@ const StyledControl = styled.aside`
   padding-top: 52px;
   row-gap: 15%;
   background-color: #fafafa;
+
+  @media ${MyTheme.media.largeTablet} {
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    padding: 0 130px;
+    flex-direction: row;
+    width: auto;
+    height: 80px;
+  }
 `;

@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { MyTheme } from '../../../styles/Theme.styled';
 import { Icon } from '../../../componets/icon/Icon';
 import img from '../../../assets/images/photo.webp';
-
+import { Burger } from '../burger/Burger';
 
 export const Hero = () => {
   return (
     <StyledHero id="home">
+      <Burger />
       <Content>
         <Title>
           I’m Rayan Adlrdard <span>Front-end</span> Developer
@@ -48,12 +49,25 @@ const StyledHero = styled.section`
 
   img {
     object-fit: cover;
+
+    @media ${MyTheme.media.largeTablet} {
+      object-fit: contain;
+    }
+  }
+
+  @media ${MyTheme.media.largeTablet} {
+    flex-direction: column;
+  row-gap: 50px;
   }
 `;
 
 const Content = styled.div`
   max-width: 500px;
   margin-top: 93px;
+
+  @media ${MyTheme.media.largeTablet} {
+    margin-top: 0;
+  }
 `;
 
 const Title = styled.h1`

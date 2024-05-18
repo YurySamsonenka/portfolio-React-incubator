@@ -1,5 +1,5 @@
 import { CardText, CardTitle, StyledCard } from '../card/Card';
-import { CustomLink } from '../../../../componets/icon/CustomLink';
+import { CustomLink } from '../../../../componets/CustomLink';
 
 export const CustomCard = () => {
   return (

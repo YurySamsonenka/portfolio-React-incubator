@@ -36,6 +36,10 @@ const StyledThemeToggler = styled.label`
   #dark-theme {
     fill: ${MyTheme.colors.dark.primary};
   }
+
+  @media ${MyTheme.media.largeTablet} {
+    margin-right: 100px;
+  }
 `;
 
 const Input = styled.input`

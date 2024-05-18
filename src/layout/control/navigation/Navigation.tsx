@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from './link/Link';
+import { MyTheme } from '../../../styles/Theme.styled';
 
 const links: linkType = [
   'home',
@@ -14,7 +15,7 @@ type linkType = string[];
 
 export const Navigation = () => {
   return (
-    <nav>
+    <StyledNav>
       <List>
         {links.map((el, i) => {
           return (
@@ -23,14 +24,25 @@ export const Navigation = () => {
             </li>
           );
         })}
-        {/* <Link  linkData={links[0]} />; */}
       </List>
-    </nav>
+    </StyledNav>
   );
 };
+
+const StyledNav = styled.nav`
+  @media ${MyTheme.media.largeTablet} {
+    width: 100%;
+  }
+`;
 
 const List = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 43px;
+
+  @media ${MyTheme.media.largeTablet} {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 `;
