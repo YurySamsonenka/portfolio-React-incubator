@@ -14,6 +14,29 @@ import img8 from '../../../assets/images/portfolio/Image8.webp';
 import img9 from '../../../assets/images/portfolio/Image9.webp';
 import { Icon } from '../../../componets/icon/Icon';
 
+const tagsItems = [
+  {
+    title: 'All categories',
+    status: 'all',
+  },
+  {
+    title: 'UI Design',
+    status: 'ui',
+  },
+  {
+    title: 'Web Templates',
+    status: 'web',
+  },
+  {
+    title: 'Logo',
+    status: 'logo',
+  },
+  {
+    title: 'Branding',
+    status: 'branding',
+  },
+];
+
 const tags = [
   'All categories',
   'UI Design',

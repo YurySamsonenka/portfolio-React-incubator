@@ -38,7 +38,7 @@ const StyledThemeToggler = styled.label`
   }
 
   @media ${MyTheme.media.largeTablet} {
-    margin-right: 100px;
+    margin-right: 50px;
   }
 `;
 
