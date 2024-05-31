@@ -1,7 +1,7 @@
-import {Main} from './layout/main/Main';
 import {SideBar} from './layout/sidebar/SideBar';
 import {Control} from './layout/control/Control';
 import {Wrapper} from './componets/Wrapper';
+import {Main} from './layout/main/Main';
 
 function App() {
   return (
