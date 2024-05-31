@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-import { Activity } from './activity/Activity';
-import { Blog } from './blog/Blog';
-import { Hero } from './hero/Hero';
-import { marginButtom } from './placeholders';
-import { Plans } from './plans/Plans';
-import { Recommendations } from './plans/recommendations/Recommendations';
-import { Portfolio } from './portfolio/Portfolio';
-import { Separator } from './separator/Separator';
-import { Services } from './services/Services';
-import { Connection } from './connection/Connection';
-import { Title } from './Title';
-import { Contact } from './contact/Contact';
-import { Map } from './map/Map';
-import { Banners } from './banners/Banners';
-import { Footer } from '../footer/Footer';
-import { WrapperForMain } from '../../componets/WrapperForMain';
+import {Activity} from './activity/Activity';
+import {Blog} from './blog/Blog';
+import {Hero} from './hero/Hero';
+import {marginButtom} from './placeholders';
+import {Plans} from './plans/Plans';
+import {Recommendations} from './plans/recommendations/Recommendations';
+import {Portfolio} from './portfolio/Portfolio';
+import {Separator} from './separator/Separator';
+import {Services} from './services/Services';
+import {Connection} from './connection/Connection';
+import {Title} from './Title';
+import {Contact} from './contact/Contact';
+import {Map} from './map/Map';
+import {Banners} from './banners/Banners';
+import {Footer} from '../footer/Footer';
+import {WrapperForMain} from '../../componets/WrapperForMain';
 
 const activites = [
   {
@@ -108,7 +108,7 @@ export const Main = () => {
 };
 
 const TwoSections = styled.div`
-  ${marginButtom}
+  ${marginButtom};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { MyTheme } from '../styles/Theme.styled';
-import { Icon } from './icon/Icon';
+import {MyTheme} from '../styles/Theme.styled';
+import {Icon} from './icon/Icon';
 
 type CustomLinkPropsType = {
   href: string;
@@ -33,9 +33,9 @@ const StyledCustomLink = styled.a`
 
   svg {
     width: 5px;
+    fill: currentColor;
     height: 7px;
     transition: transform 0.2s linear;
-    fill: currentColor;
   }
 
   @media (hover: hover) {

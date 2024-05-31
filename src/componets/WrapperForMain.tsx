@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { MyTheme } from '../styles/Theme.styled';
+import {MyTheme} from '../styles/Theme.styled';
 
 export const WrapperForMain = styled.div`
-  display: block;
+  display: block;  
 
   @media ${MyTheme.media.largeTablet} {
     position: relative;

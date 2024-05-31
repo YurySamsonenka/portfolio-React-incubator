@@ -1,15 +1,16 @@
-import { Main } from './layout/main/Main';
-import { SideBar } from './layout/sidebar/SideBar';
-import { Control } from './layout/control/Control';
-import { Wrapper } from './componets/Wrapper';
-import { WrapperForMain } from './componets/WrapperForMain';
+import {Main} from './layout/main/Main';
+import {SideBar} from './layout/sidebar/SideBar';
+import {Control} from './layout/control/Control';
+import {Wrapper} from './componets/Wrapper';
 
 function App() {
   return (
     <Wrapper className="App">
-      <SideBar />
-      <Main />
-      <Control />
+      <SideBar/>
+      <Main/>
+      <div>
+        <Control/>
+      </div>
     </Wrapper>
   );
 }

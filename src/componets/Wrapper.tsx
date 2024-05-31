@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { MyTheme } from '../styles/Theme.styled';
-import { WrapperForMain } from './WrapperForMain';
 
 export const Wrapper = styled.div`
   position: relative;

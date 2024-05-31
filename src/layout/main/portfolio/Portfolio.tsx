@@ -13,8 +13,12 @@ import img7 from '../../../assets/images/portfolio/Image7.webp';
 import img8 from '../../../assets/images/portfolio/Image8.webp';
 import img9 from '../../../assets/images/portfolio/Image9.webp';
 import { Icon } from '../../../componets/icon/Icon';
+import { useState } from 'react';
 
-const tagsItems = [
+const tagsItems: Array<{
+  title: string;
+  status: 'all' | 'ui' | 'web' | 'logo' | 'branding';
+}> = [
   {
     title: 'All categories',
     status: 'all',
@@ -37,17 +41,68 @@ const tagsItems = [
   },
 ];
 
-const tags = [
-  'All categories',
-  'UI Design',
-  'Web Templates',
-  'Logo',
-  'Branding',
+const projectItems = [
+  {
+    srcImg: img1,
+    type: 'ui',
+  },
+  {
+    srcImg: img2,
+    type: 'ui',
+  },
+  {
+    srcImg: img3,
+    type: 'web',
+  },
+  {
+    srcImg: img4,
+    type: 'logo',
+  },
+  {
+    srcImg: img5,
+    type: 'web',
+  },
+  {
+    srcImg: img6,
+    type: 'logo',
+  },
+  {
+    srcImg: img7,
+    type: 'branding',
+  },
+  {
+    srcImg: img8,
+    type: 'logo',
+  },
+  {
+    srcImg: img9,
+    type: 'branding',
+  },
 ];
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
-
 export const Portfolio = () => {
+  const [currentFilterStatus, setCurrentFilterStatus] = useState('all');
+  let filteredProjects = projectItems;
+
+  if (currentFilterStatus === 'ui') {
+    filteredProjects = projectItems.filter((el) => el.type === 'ui');
+  }
+  if (currentFilterStatus === 'web') {
+    filteredProjects = projectItems.filter((el) => el.type === 'web');
+  }
+  if (currentFilterStatus === 'logo') {
+    filteredProjects = projectItems.filter((el) => el.type === 'logo');
+  }
+  if (currentFilterStatus === 'branding') {
+    filteredProjects = projectItems.filter((el) => el.type === 'branding');
+  }
+
+  function changeFilterStatus(
+    value: 'all' | 'ui' | 'web' | 'logo' | 'branding'
+  ) {
+    setCurrentFilterStatus(value);
+  }
+
   return (
     <StyledPortfolio id="portfolio">
       <Title>Portfolio</Title>
@@ -56,17 +111,20 @@ export const Portfolio = () => {
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
       </Description>
       <Tags>
-        {tags.map((el, i) => {
+        {tagsItems.map((el, i) => {
           if (i === 0) {
             return (
-              <div key={`${el}${i}`}>
+              <div key={`${el.title}${i}`}>
                 <input
                   type="radio"
                   name="radio"
                   id={`tag-radio${i}`}
                   checked={i === 0}
+                  onClick={() => {
+                    changeFilterStatus(el.status);
+                  }}
                 />
-                <label htmlFor={`tag-radio${i}`}>{el}</label>
+                <label htmlFor={`tag-radio${i}`}>{el.title}</label>
               </div>
             );
           }
@@ -74,16 +132,16 @@ export const Portfolio = () => {
           return (
             <div key={`${el}${i}`}>
               <input type="radio" name="radio" id={`tag-radio${i}`} />
-              <label htmlFor={`tag-radio${i}`}>{el}</label>
+              <label htmlFor={`tag-radio${i}`}>{el.title}</label>
             </div>
           );
         })}
       </Tags>
       <Projects>
-        {images.map((el, i) => {
+        {filteredProjects.map((el, i) => {
           return (
             <Link key={`image${i}`} href="#">
-              <Image src={el} alt="project" />
+              <Image src={el.srcImg} alt="project" />
               <Wrapper>
                 <Icon
                   iconId="close"

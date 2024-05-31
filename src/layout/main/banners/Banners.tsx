@@ -1,9 +1,22 @@
 import styled from 'styled-components';
-import { MyTheme } from '../../../styles/Theme.styled';
-import { Icon } from '../../../componets/icon/Icon';
-import { marginButtom } from '../placeholders';
+import {MyTheme} from '../../../styles/Theme.styled';
+import {Icon} from '../../../componets/icon/Icon';
+import {marginButtom} from '../placeholders';
 
 const banners = ['banner1', 'banner2', 'banner3', 'banner4'];
+
+type PropsType = {
+  a: number
+  b: number
+}
+
+let a = 's';
+console.log(a);
+
+const ba: PropsType = {
+  a: 1,
+  b: 2
+};
 
 export const Banners = () => {
   return (
@@ -24,7 +37,7 @@ export const Banners = () => {
 };
 
 const StyledBanners = styled.section`
-  ${marginButtom}
+  ${marginButtom};
 
   display: flex;
   flex-wrap: wrap;
